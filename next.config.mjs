@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 const basePath = rawBasePath
-  ? `/${rawBasePath.replace(/^\\/+|\\/+$/g, "")}`
+  ? `/${rawBasePath.replace(/^\\/+/, "").replace(/\\/+$/, "")}`
   : ""
 
 const nextConfig = {
